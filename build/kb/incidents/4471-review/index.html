@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../_app/immutable/entry/start.Cj3f7TFW.js" rel="modulepreload">
+    <link href="../../../_app/immutable/entry/start.Cmil_ewM.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CpSsotOo.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/w2sR9PTS.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/D2tdvOVw.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DXJCj66o.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.BDVWXwUy.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.HjmrL4cA.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DQQBoyKe.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DvhwziCj.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DVszyQGg.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CEmwTOe3.js" rel="modulepreload">
 		<link href="../../../_app/immutable/nodes/0.CEBx5dxJ.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CHYQm_l3.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/5.jfBX1y4O.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/DVPh28nQ.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/5.C9zFSz35.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/B7JTQr6C.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/By9K9yZC.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BzDL0U7l.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/B9BCdJxP.js" rel="modulepreload">
@@ -29,7 +29,10 @@
   </head>
   <body data-sveltekit-preload-data="hover"><div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 review: two causes behind one known ticket</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Codex for Michał Olszak</b></span> <span class="status proposed svelte-e2jw2j">proposed</span> <span class="svelte-e2jw2j">reviewed 2026-11-01 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p>The <a href="/kb/incidents/4471">original incident</a> says one known issue and one queued fix.
 Its rendered evidence separates a shared-parser failure from a booking-form hint failure.
-Keep a ticket for each cause; a parser fix does not establish that the form hint is fixed.</p> <h2>Count the reports, not export rows or intake guesses</h2> <p>The following view deduplicates by report ID, selects reports merged into #4471,
+Keep a ticket for each cause; a parser fix does not establish that the form hint is fixed.</p> <h2>Engineering outcome: closed 5 October</h2> <p>The course desk’s engineering update closes #4471 on 5 October 2026 with two different outcomes:</p> <ul><li><a href="https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/1" rel="nofollow">Parser ticket</a>: <strong>fixed</strong>, <code>fix(dates): parse dd/mm for eu locales</code>. Close as completed on the strength of that update.</li> <li><a href="https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/2" rel="nofollow">Hint ticket</a>: <strong>won’t fix</strong>,
+because the booking-v3 form was retired. Close as not planned; retirement is not a hint fix.</li></ul> <p>The counts and chart below preserve the earlier export. Their historical queue labels do
+not override the later engineering update. The five anomalous reports still lack a proven
+cause; closing the parent tickets does not prove that each symptom was fixed.</p> <h2>Count the reports, not export rows or intake guesses</h2> <p>The following view deduplicates by report ID, selects reports merged into #4471,
 and resolves the tenant directory before classifying. It computes its counts when rendered.
 This is the desk’s export dated 4 October 2026, not a live queue total.</p> <p class="sum svelte-12oyimm"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p> <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody><!--[--><tr class="svelte-12oyimm"><td class="svelte-12oyimm"><code>parser</code></td><td class="svelte-12oyimm">379</td><td class="tags svelte-12oyimm">parser ×356 · hint ×23</td><td class="svelte-12oyimm">11</td><td class="svelte-12oyimm">2026-04-01 → 2026-10-04</td><td class="svelte-12oyimm">#4471</td></tr><tr class="svelte-12oyimm wrong"><td class="svelte-12oyimm"><code>hint</code></td><td class="svelte-12oyimm">33</td><td class="tags svelte-12oyimm">hint ×18 · parser ×15</td><td class="svelte-12oyimm">3</td><td class="svelte-12oyimm">2026-04-17 → 2026-09-22</td><td class="svelte-12oyimm">not this ticket — no ticket of its own</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-12oyimm">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <p>The classifier uses the tenant’s locale and booking-form version plus the report’s channel.
 It asks the platform whether that locale is day-first. Browser locale and intake tags are
@@ -57,15 +60,15 @@ the desk relies on it; the source prose alone does not show what its components 
 			
 			<script>
 				{
-					__sveltekit_1to4yd1 = {
+					__sveltekit_8ld5xv = {
 						base: new URL("../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.Cj3f7TFW.js"),
-						import("../../../_app/immutable/entry/app.BDVWXwUy.js")
+						import("../../../_app/immutable/entry/start.Cmil_ewM.js"),
+						import("../../../_app/immutable/entry/app.HjmrL4cA.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

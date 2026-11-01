@@ -55,4 +55,9 @@ The render verification additionally requires Playwright and Chrome, and
 
 Local work prepared and verified. The student approved publication to
 `Olszi37/mega-s01e03-what-it-shows`, including the two issues and revisions for course acceptance.
-The course has not yet accepted a submission.
+The course accepted both tickets at step one. Its engineering update says #4471 closed on
+2026-10-05: parser fixed (`fix(dates): parse dd/mm for eu locales`); hint won't fix because
+booking-v3 was retired. The KB records both dispositions without changing historical counts.
+Parser issue: https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/1
+Hint issue: https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/2
+Final course acceptance is pending.

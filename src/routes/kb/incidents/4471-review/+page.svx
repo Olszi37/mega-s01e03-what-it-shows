@@ -19,6 +19,19 @@ The [original incident](/kb/incidents/4471) says one known issue and one queued 
 Its rendered evidence separates a shared-parser failure from a booking-form hint failure.
 Keep a ticket for each cause; a parser fix does not establish that the form hint is fixed.
 
+## Engineering outcome: closed 5 October
+
+The course desk's engineering update closes #4471 on 5 October 2026 with two different outcomes:
+
+- [Parser ticket](https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/1): **fixed**,
+  `fix(dates): parse dd/mm for eu locales`. Close as completed on the strength of that update.
+- [Hint ticket](https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/2): **won't fix**,
+  because the booking-v3 form was retired. Close as not planned; retirement is not a hint fix.
+
+The counts and chart below preserve the earlier export. Their historical queue labels do
+not override the later engineering update. The five anomalous reports still lack a proven
+cause; closing the parent tickets does not prove that each symptom was fixed.
+
 ## Count the reports, not export rows or intake guesses
 
 The following view deduplicates by report ID, selects reports merged into #4471,
