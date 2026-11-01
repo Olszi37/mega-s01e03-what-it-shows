@@ -98,6 +98,6 @@ Proposed replacement rule: resolve the tenant and entry route, reproduce or esta
 
 Keep each issue’s count scoped to its export and keep its report IDs traceable. Recompute when new reports arrive. Check this page’s rendered tables, examples and signature before the desk relies on it; the source prose alone does not show what its components will say.
 
-desk ref DR-HR95-WZSB
+desk ref DR-YA2W-ZJJ6
 
 Pages are written by people. Tables and charts are built from data at render time.

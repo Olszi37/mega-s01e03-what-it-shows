@@ -35,7 +35,7 @@ cause-based triage and a successor decision; accepted decision 0001 is preserved
    checked rendered counts, five-report footnote and derived signature; no page errors.
 4. Visually inspected the full-page browser capture.
 
-The rendered signature derives desk ref `DR-HR95-WZSB` from the page's frontmatter.
+The rendered signature derives desk ref `DR-YA2W-ZJJ6` from the page's frontmatter.
 No exported KB component, report, tenant, original page or accepted decision was changed.
 
 ## Rebuild
