@@ -60,4 +60,5 @@ The course accepted both tickets at step one. Its engineering update says #4471 
 booking-v3 was retired. The KB records both dispositions without changing historical counts.
 Parser issue: https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/1
 Hint issue: https://github.com/Olszi37/mega-s01e03-what-it-shows/issues/2
-Final course acceptance is pending.
+The course accepted the final submission on 2026-11-01. S01E03 is solved.
+The saved debrief is at https://hq.mega.dev/challenges/what-it-shows#debrief.
