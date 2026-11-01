@@ -1,0 +1,94 @@
+support desk · kb
+#4471 review: two causes behind one known ticket
+
+owner Codex for Michał Olszak
+proposed
+reviewed 2026-11-01 · 0 days ago
+
+The original incident says one known issue and one queued fix. Its rendered evidence separates a shared-parser failure from a booking-form hint failure. Keep a ticket for each cause; a parser fix does not establish that the form hint is fixed.
+
+Count the reports, not export rows or intake guesses
+
+The following view deduplicates by report ID, selects reports merged into #4471, and resolves the tenant directory before classifying. It computes its counts when rendered. This is the desk’s export dated 4 October 2026, not a live queue total.
+
+412 reports merged into #4471 · 2 causes
+
+cause	reports	tagged as	tenants	seen	
+parser	379	parser ×356 · hint ×23	11	2026-04-01 → 2026-10-04	#4471
+hint	33	hint ×18 · parser ×15	3	2026-04-17 → 2026-09-22	not this ticket — no ticket of its own
+
+5 reports read as a one-day move; filed under parser by tenant.
+
+The classifier uses the tenant’s locale and booking-form version plus the report’s channel. It asks the platform whether that locale is day-first. Browser locale and intake tags are intake guesses; neither establishes the cause. Overlapping export pages repeat some IDs; one ID is one report. See evidence/audit.json for the assigned IDs and reconciliation.
+
+Two separate fixes
+Parser: the shared parser reads dates month-first for day-first tenants. App and email reports, and forms without the booking-v3 hint mismatch, fall into this group. Parse with the tenant’s declared format. Verify ambiguous dates and the relevant entry routes.
+Hint: booking-v3 tells a day-first tenant to type MM/DD/YYYY, while the form reads the date in the tenant’s order. Derive the hint and input interpretation from one format rule, then verify that following the hint preserves the intended day and month.
+Five reports still need investigation
+
+The table’s footnote preserves the desk’s one-day-move reports under their tenant-derived parser classification. R-41202, R-41209, R-41236, R-41344 and R-41620 describe a day shift, regional disagreement, or an invite arriving before the booking. Those descriptions do not establish a parser failure. Inspect the original timestamps, zones and reminder flow, and reproduce the behavior. They remain included in the parser count; do not count them again as a confirmed third cause without evidence.
+
+When reports arrived and when the desk merged them
+03-30
+04-27
+05-25
+06-22
+07-20
+08-17
+09-14
+ received ·  merged into #4471 · per week
+
+Arrival time and merge time are different events. A large merge batch is not evidence that all those failures began that week. Review the late arrivals as well as the initial batch; the desk continues to receive reports while this export stays fixed.
+
+Triage by cause, with evidence
+
+The triage page and accepted decision 0001 prescribe subject matching. Their rendered counterexamples disagree with that rule. The layout marks the old review date stale. Subject matching can merge different causes and split one cause across subjects. Do not silently edit an accepted decision: propose a successor after review.
+
+report A
+alder.physio
+copper.studio
+harbour.dental
+kettle.books
+lantern.row
+long.table
+morrow.tax
+nine.lanterns
+pale.harbour
+ridge.clinic
+stone.and.sons
+app
+email
+form
+hint
+report B
+alder.physio
+copper.studio
+harbour.dental
+kettle.books
+lantern.row
+long.table
+morrow.tax
+nine.lanterns
+pale.harbour
+ridge.clinic
+stone.and.sons
+app
+email
+form
+parser
+
+different causes — keep apart
+
+case	same subject	same cause
+app vs email, same tenant	no	yes
+same subject, same tenant, different channel	yes	no
+same subject, same channel, different tenant	yes	no
+different subject, same way in	no	yes
+no tenant on file	yes	no
+Proposed replacement rule: resolve the tenant and entry route, reproduce or establish the same cause, and only then merge. Different subjects can share a cause; matching subjects can hide different causes. A missing tenant or uncertain symptom stays unclassified until investigated. A fresh review date or a known status is not proof that a page is correct.
+
+Keep each issue’s count scoped to its export and keep its report IDs traceable. Recompute when new reports arrive. Check this page’s rendered tables, examples and signature before the desk relies on it; the source prose alone does not show what its components will say.
+
+desk ref DR-HR95-WZSB
+
+Pages are written by people. Tables and charts are built from data at render time.

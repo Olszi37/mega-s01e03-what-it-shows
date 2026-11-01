@@ -1,0 +1,5 @@
+node_modules/
+.svelte-kit/
+.pnpm-store/
+.pnpm-cache/
+*.log
